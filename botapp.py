@@ -67,7 +67,7 @@ def pretty_echo(event):
 @app.route('/', methods=['GET', 'POST'])
 def index():
     return render_template(
-            "index.html",
+            "./index.html",
     )
 
 
