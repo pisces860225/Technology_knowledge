@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
 import os
-from flask import Flask, request, abort
+from flask import Flask, request, abort,render_template
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent, TextMessage, TextSendMessage, messages
@@ -64,6 +64,12 @@ def pretty_echo(event):
             event.reply_token,
             TextSendMessage(text=returnmessage)
         )
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    return render_template(
+            "index.html",
+    )
+
 
 if __name__ == "__main__":
     app.run()
