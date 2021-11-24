@@ -1,1 +1,1 @@
-web: python ./botapp.py
+web: python3 botapp.py
