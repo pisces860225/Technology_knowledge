@@ -66,9 +66,7 @@ def pretty_echo(event):
         )
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    return render_template(
-            "./index.html",
-    )
+    return "<h1>Welcome to CodingX</h1>"
 
 
 if __name__ == "__main__":
